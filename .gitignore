@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environments and editor files
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Datasets and converted caches
+data/
+datasets/
+cache/
+*.npz
+*.h5
+*.hdf5
+*.mat
+
+# Pretrained checkpoints are GitHub Release assets
+weights/*.pt
+weights/*.pth
+weights/*.ckpt
+
+# Training and evaluation outputs
+outputs/
+runs/
+swanlog/
+*.log
+*.csv
+*.fig
+*.pdf
+*.png

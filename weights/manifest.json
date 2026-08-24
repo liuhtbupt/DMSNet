@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "distribution": "GitHub Release assets",
+  "checkpoints": [
+    {
+      "module": "countnet",
+      "filename": "countnet_sionna_best.pt",
+      "size_bytes": 45993714,
+      "sha256": "e8682bee752a5a97d21bdcd33e6773fd798f9cb584c41a4458b4eaa8ad60d994",
+      "selection_metric": "best validation macro accuracy"
+    },
+    {
+      "module": "paramnet",
+      "filename": "paramnet_sionna_best.pt",
+      "size_bytes": 110400976,
+      "sha256": "65636c64a8371c388fbab639d73e0819efad695b82a9ac2c7135c649eab39378",
+      "selection_metric": "best validation Wasserstein-1 score"
+    },
+    {
+      "module": "refiner",
+      "filename": "refiner_sionna_stage_d_best.pt",
+      "size_bytes": 46960726,
+      "sha256": "ff8b3ec2afa632454b01340c368212ac95788adf55fdaf21c0ea025b1fe6fab3",
+      "selection_metric": "best Stage-D validation loss"
+    }
+  ]
+}
