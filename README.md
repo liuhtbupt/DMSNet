@@ -25,8 +25,8 @@ weights/      Checkpoint manifest and download instructions
 tests/        Lightweight release and interface tests
 ```
 
-Datasets, converted caches, generated metrics, and checkpoint binaries are not
-tracked by Git.
+Converted caches, generated metrics, and checkpoint binaries are not tracked
+by Git. The original datasets are hosted separately on Hugging Face.
 
 ## Installation
 
@@ -43,11 +43,29 @@ Download the three GitHub Release assets described in
 `weights/`. See [`weights/README.md`](weights/README.md) for filenames and
 checksum verification.
 
+## Dataset
+
+The Sionna-generated training and test datasets used by this project are
+available from the
+[DMSNet dataset repository on Hugging Face](https://huggingface.co/datasets/haotianbupt/DMSNet_dataset/tree/main).
+Download the required `.npz` files from that repository and place them under
+`data/DMSNet_dataset/`. The training set is used by the module-wise training programs, while
+`beiyou_test_10000_clean.npz` and `beiyou_test_2000_clean_K2.npz` are used for
+target-count/runtime evaluation and parameter-error evaluation, respectively.
+
+Large files can also be obtained by cloning the dataset repository with Git
+LFS:
+
+```bash
+git lfs install
+git clone https://huggingface.co/datasets/haotianbupt/DMSNet_dataset data/DMSNet_dataset
+```
+
 ## Prepare a dataset
 
 ```bash
 python data_tools/convert_sionna_npz_to_h5.py \
-  --npz /path/to/beiyou_test_10000_clean.npz \
+  --npz data/DMSNet_dataset/beiyou_test_10000_clean.npz \
   --out data/beiyou_test_10000_clean_joint.h5
 ```
 

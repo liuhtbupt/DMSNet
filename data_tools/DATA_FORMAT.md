@@ -1,5 +1,8 @@
 # Data Format
 
+The public NPZ files are available from the
+[DMSNet dataset repository on Hugging Face](https://huggingface.co/datasets/haotianbupt/DMSNet_dataset/tree/main).
+
 The release expects clean complex Sionna tensors stored in an uncompressed or
 ZIP-compressed NumPy archive (`.npz`). Large arrays are streamed during HDF5
 conversion, so the complete dataset is not loaded into RAM.
